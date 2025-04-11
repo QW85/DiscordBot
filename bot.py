@@ -5,7 +5,7 @@ from discord.ext import commands
 intents = discord.Intents.default()
 intents.members = True  # 서버 멤버 관련 이벤트 허용
 intents.voice_states = True  # 음성 상태 업데이트 이벤트 허용
-n
+
 # 봇 초기화
 bot = commands.Bot(command_prefix="!", intents=intents)
 
