@@ -3,8 +3,12 @@ import os
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
-load_dotenv(r'E:\9.DiscordBot\DiscordProject\fhqht.qhtt')
+# .env 파일 경로 명시적으로 지정
+load_dotenv(dotenv_path=r'E:\9.DiscordBot\DiscordProject\.env')  # .env 파일 경로 수정
 token = os.getenv('DISCORD_TOKEN')
+
+if not token:
+    raise ValueError("DISCORD_TOKEN 환경 변수가 설정되지 않았습니다.")  # 토큰 없을 시 오류 발생
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -60,4 +64,3 @@ async def before_check():
 
 if __name__ == "__main__":
     bot.run(token)
-
