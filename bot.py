@@ -3,7 +3,7 @@ import os
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
-load_dotenv(r'E:\9.DiscordBot\DiscordProject\bott')
+load_dotenv(r'E:\9.DiscordBot\DiscordProject\fhqht.qhtt')
 token = os.getenv('DISCORD_TOKEN')
 
 intents = discord.Intents.default()
